@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Crush Day</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url('https://raw.githubusercontent.com/DzarelDeveloper/Img/main/CrushDay.jpg') no-repeat center center fixed;
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .content img {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+
+        .content .icon {
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+            animation: slide 2s infinite;
+        }
+
+        @keyframes slide {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(0);
+            }
+            40% {
+                transform: translateX(10px);
+            }
+            60% {
+                transform: translateX(5px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                width: 60%;
+                max-width: 600px;
+            }
+
+            .content img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+            }
+
+            .content .icon {
+                font-size: 1.5rem;
+            }
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .btn-hover {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #ff69b4;
+            border: none;
+            border-radius: 25px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .btn-hover:hover {
+            background-color: #ff1493;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s;
+        }
+
+        .btn-hover:hover::before {
+            left: 100%;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio id="myAudio" controls autoplay>
+        <source src="https://h.top4top.io/m_3154v27hu1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="content">
+        <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Idon'tlikeyou.png" alt="Profile Image">
+        <p>Di balik malam yang sunyi,<br>
+            Aku merenungi jejak langkah yang mungkin menyakitimu.<br>
+            Maafkan aku,<br>
+            Bukan niatku untuk mengusik ketenangan hatimu,<br>
+            Aku hanya terlanjur jatuh dalam harapan yang tak bersambut.<br>
+            
+            Bukan cinta yang salah,<br>
+            Hanya mungkin waktunya belum tepat,<br>
+            Dan aku yang terlalu mendesak,<br>
+            Mengira pintu hatimu siap untuk terbuka.<br>
+            
+            Kini, aku ingin melangkah mundur dengan hati yang lebih tenang,<br>
+            Tanpa beban, tanpa luka.<br>
+            Maafkan aku,<br>
+            Karena telah mengganggu ruangmu,<br>
+            Aku harap kau menemukan kedamaian seperti yang kau inginkan.<br>
+            
+            Meski tak lagi bersama,<br>
+            Rasaku tetap akan menjadi kenangan,<br>
+            Terima kasih untuk waktu yang kau berikan,<br>
+            Dan maafkan atas semua kesalahan.</p>
+        <a href="https://wa.me/6281315091163?text=maaf aku engga mau..." class="btn-hover" onclick="stopMusic()">
+            <i class="fas fa-heart"></i>
+        </a><br>
+        <a href="Home.html" class="btn-hover" onclick="stopMusic()">Kembali</a>
+    </div>
+    <script>
+        document.getElementById('myAudio').play();
+    </script>
+</body>
+</html>

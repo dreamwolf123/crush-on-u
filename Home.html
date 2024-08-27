@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Crush Day</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://raw.githubusercontent.com/DzarelDeveloper/Img/main/CrushDay.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 30px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .content img:hover {
+            transform: scale(1.05);
+        }
+
+        .content p {
+            font-size: 1rem;
+            margin: 15px 0;
+            line-height: 1.4;
+            font-weight: 300;
+        }
+
+        .content .buttons {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content .buttons a {
+            text-decoration: none;
+            padding: 10px 30px;
+            background-color: #ff4081;
+            color: white;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+            position: relative;
+            overflow: hidden;
+            width: 80%;
+            max-width: 200px;
+            font-size: 0.9rem;
+        }
+
+        .content .buttons a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: all 0.5s;
+        }
+
+        .content .buttons a:hover:before {
+            left: 100%;
+        }
+
+        .content .buttons a:hover {
+            background-color: #e0006f;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(224, 0, 111, 0.6);
+        }
+
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px;
+            }
+
+            .content img {
+                width: 180px;
+                height: 180px;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+            }
+
+            .content .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .content .buttons a {
+                width: auto;
+                padding: 12px 35px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .content {
+                padding: 20px;
+            }
+
+            .content img {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 15px;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+                margin: 10px 0;
+            }
+
+            .content .buttons {
+                margin-top: 15px;
+            }
+
+            .content .buttons a {
+                padding: 8px 25px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img src="https://raw.githubusercontent.com/DzarelDeveloper/Img/main/Ihavecrushyou.jpg" alt="Profile Image">
+        <p>Di setiap senja yang tenggelam,<br>
+            Aku temukan bayangmu di ujung cahaya.<br>
+            Maukah kau menjadi terang dalam hariku,<br>
+            Dan kita ukir cerita bersama, selamanya?</p>
+        <div class="buttons">
+            <a href="Diterima.html">Mau</a>
+            <a href="Gamau.html">Gak Mau</a>
+        </div>
+    </div>
+</body>
+</html>
+
